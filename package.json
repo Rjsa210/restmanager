@@ -13,7 +13,7 @@
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
     "seed": "node seed.js",
-    "install": "npm --prefix ./client run install",
+    "install": "npm --prefix ./client install",
     "build": "npm --prefix ./client run build",
     "heroku-postbuild": "npm run build"
   },
