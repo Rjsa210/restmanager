@@ -2,6 +2,9 @@
   "name": "restmanager",
   "version": "1.0.0",
   "description": "A Restaurant group management app",
+  "engines": {
+    "node": "16.x"
+  },
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +13,7 @@
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
-    "build": "cd client && npm run build",
+    "build": "./cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
   "repository": {
