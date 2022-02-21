@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "A Restaurant group management app",
   "engines": {
-    "node": "16.x"
+    "node": "16.x",
+    "npm": "8.x"
   },
   "main": "server.js",
   "scripts": {
