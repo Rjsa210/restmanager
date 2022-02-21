@@ -40,8 +40,12 @@ app.use(express.json());
 app.use(routes);
 
 /* Serve static assets (i.e. Heroku)*/
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static("client/build"));
+// }
+
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+  app.use('/', express.static(path.join(__dirname, '/client/build')));
 }
 
 app.get("*", (req, res) => {
