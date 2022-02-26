@@ -24,7 +24,8 @@ Vendor.init({
 
 },{
   sequelize,
-  timestamps: false
+  timestamps: false,
+  freezeTableName: true
 });
 
 module.exports = Vendor;

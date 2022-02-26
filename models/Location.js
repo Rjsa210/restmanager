@@ -26,7 +26,8 @@ Location.init({
 },
 {
   sequelize,
-  timestamps: false
+  timestamps: false,
+  freezeTableName: true
 });
 
 module.exports = Location;
