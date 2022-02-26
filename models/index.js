@@ -14,4 +14,5 @@ const Product = require("./Product");
 
 
 
-module.exports = { Product, Location, Vendor };
+// module.exports = { Product, Location, Vendor };
+module.exports = { Product };
