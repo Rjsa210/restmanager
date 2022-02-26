@@ -21,7 +21,7 @@ if (process.env.JAWSDB_URL) {
       dialect: "mysql",
       port: 3306
     }
-  )
+  );
 }
 
 // sequelize = new Sequelize(

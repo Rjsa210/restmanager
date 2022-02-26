@@ -59,6 +59,6 @@ app.get("*", (req, res) => {
 // })
 
 /* Server listener post-sequelize, uncomment after sequelize is set up */
-sequelize.sync({force: false}).then(() => {
+sequelize.sync({force: true}).then(() => {
   app.listen(PORT, () => console.log(`Hello World 🌎 ==> DB Synced... API server now on port ${PORT}!`));
 });
