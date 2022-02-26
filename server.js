@@ -18,7 +18,7 @@ const app = express();
 
 /* sequelize setup, uncomment later */
 
-const sequelize = require("./config/connection");
+const sequelize = require("./config/connection.js");
 const sequelizeStore = require("connect-session-sequelize")(session.Store);
 
 const sess = {

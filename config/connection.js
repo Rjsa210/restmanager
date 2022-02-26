@@ -9,7 +9,6 @@ let sequelize;
 
 if (process.env.JAWSDB_URL) {
   // if connected build from deployed database via jawsDB
-  console.log("JAWSDB_URL found")
   sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
   // else build with name, user, pw on local host port 3306
