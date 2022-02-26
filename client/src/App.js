@@ -53,22 +53,22 @@ const testFetch = () => {
   API.getAllProducts()
   .then(res => console.log(res))
   .catch(err => {
-    if (error.response) {
+    if (err.response) {
       // The request was made and the server responded with a status code
       // that falls out of the range of 2xx
-      console.log(error.response.data);
-      console.log(error.response.status);
-      console.log(error.response.headers);
-    } else if (error.request) {
+      console.log(err.response.data);
+      console.log(err.response.status);
+      console.log(err.response.headers);
+    } else if (err.request) {
       // The request was made but no response was received
       // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
       // http.ClientRequest in node.js
-      console.log(error.request);
+      console.log(err.request);
     } else {
       // Something happened in setting up the request that triggered an Error
-      console.log('Error', error.message);
+      console.log('Error', err.message);
     }
-    console.log(error.config);
+    console.log(err.config);
 })
 }
 
