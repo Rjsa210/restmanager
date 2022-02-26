@@ -18,7 +18,7 @@ const app = express();
 
 /* sequelize setup, uncomment later */
 
-const sequelize = require("./config/connection.js");
+const sequelize = require("./config/connection");
 const sequelizeStore = require("connect-session-sequelize")(session.Store);
 
 const sess = {
@@ -31,7 +31,7 @@ const sess = {
   })
 };
 
-//a cool comment 
+
 /* Define Middleware */
 app.use(session(sess));
 

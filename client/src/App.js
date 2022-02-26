@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import API from './utils/API';
 
 const newProd = {
   product_name: "Melon, Watermelon",
@@ -30,22 +31,28 @@ const testInsert = async (e) => {
   }
 };
 
-const testFetch = async (e) => {
-  e.preventDefault();
-  const response = await fetch("/api/products", {
-    method: "GET",
-    // headers: {
-    //   "content/type": "application/json",
-    // }
-  });
-  if (response.ok) {
-    console.log(response);
-    alert(response.status);
-  } else {
-    console.log(response);
-    alert(response.status);
-  }
+// const testFetch = async (e) => {
+//   e.preventDefault();
+//   const response = await fetch("/api/products", {
+//     method: "GET",
+//     // headers: {
+//     //   "content/type": "application/json",
+//     // }
+//   });
+//   if (response.ok) {
+//     console.log(response);
+//     alert(response.status);
+//   } else {
+//     console.log(response);
+//     alert(response.status);
+//   }
 
+// }
+
+const testFetch = () => {
+  API.getAllProducts()
+  .then(res => console.log(res))
+  .catch(err => console.log(err))
 }
 function App() {
   return (
