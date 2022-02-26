@@ -100,7 +100,7 @@ const vendorSeeds = [
 function seedProducts() {
   Product.bulkCreate(productSeeds)
   .then(console.log(`${productSeeds.length} products seeded successfully.`))
-  .then(seedLocations)
+  // .then(seedLocations)
 }
 
 function seedLocations() {
