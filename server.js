@@ -7,6 +7,7 @@ const path = require("path");
 const routes = require("./routes");
 
 require("dotenv").config();
+const cors = require("cors");
 
 
 
@@ -19,6 +20,7 @@ const app = express();
 /* sequelize setup, uncomment later */
 
 const sequelize = require("./config/connection");
+const { runInNewContext } = require("vm");
 const sequelizeStore = require("connect-session-sequelize")(session.Store);
 
 const sess = {
@@ -38,7 +40,7 @@ app.use(session(sess));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(routes);
-
+app.use(cors());
 /* Serve static assets (i.e. Heroku)*/
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
