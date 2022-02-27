@@ -20,7 +20,7 @@ const app = express();
 /* sequelize setup, uncomment later */
 
 const sequelize = require("./config/connection");
-const { runInNewContext } = require("vm");
+
 const sequelizeStore = require("connect-session-sequelize")(session.Store);
 
 const sess = {
